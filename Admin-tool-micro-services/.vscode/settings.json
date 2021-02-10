@@ -1,0 +1,22 @@
+{
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#1aaa55",
+    "titleBar.inactiveBackground": "#1aaa5599",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "activityBar.activeBackground": "#21d66b",
+    "activityBar.activeBorder": "#9359e5",
+    "activityBar.background": "#21d66b",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#9359e5",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#1aaa55",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#21d66b"
+  },
+  "peacock.color": "#1aaa55"
+}

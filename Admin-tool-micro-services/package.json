@@ -1,0 +1,55 @@
+{
+  "name": "admin-microservices",
+  "version": "1.0.0",
+  "description": "A micronfrontend manager for microservices",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm run install:config && npm run install:navbar",
+    "install:config": "npm i",
+    "install:navbar": "cd ./navbar/ && npm i",
+    "audit-fix": "npm run audit-fix:config",
+    "start": "concurrently --kill-others --kill-others-on-fail -p name --names \"app-manifest,config,common-deps,navbar\" \"npm run start:app-manifest\" \"npm run start:config\" \"npm run start:common-deps\" \"npm run start:global-reducer\" \"npm run start:navbar\"",
+    "start:config": "webpack-dev-server --config ./webpack.config.config.dev.js --port 7233",
+    "start:common-deps": "webpack-dev-server --config ./webpack.common-deps.config.dev.js --port 7234",
+    "start:global-reducer": "webpack-dev-server --config ./webpack.globalReducer.config.dev.js --port 7238",
+    "start:app-manifest": "webpack-dev-server --config ./webpack.app-manifest.config.dev.js --port 7239",
+    "start:navbar": "cd ./navbar/ && webpack-dev-server --config ./webpack.dev.js --port 7235",
+    "build": "npm run build:config && npm run build:common-deps && npm run build:navbar",
+    "build:navbar": "cd ./navbar/ && webpack --config ./webpack.config.js --p",
+    "build:config": "webpack --config ./webpack.config.config.js -p",
+    "build:common-deps": "webpack --config ./webpack.common-deps.config.js -p",
+    "build:app-manifest": "webpack --config ./webpack.app-manifest.config.js -p",
+    "audit-fix:config": "npm audit fix"
+  },
+  "author": "jezzamon",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.7.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "last 1 chrome versions"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "8.0.0",
+    "clean-webpack-plugin": "0.1.19",
+    "concurrently": "4.0.1",
+    "copy-webpack-plugin": "4.5.2",
+    "css-loader": "1.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.17.0",
+    "style-loader": "0.23.0",
+    "webpack": "4.17.1",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "^3.1.14"
+  }
+}

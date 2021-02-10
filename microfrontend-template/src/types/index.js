@@ -1,0 +1,18 @@
+// config
+export const CONFIG_REQUESTED = 'CONFIG_REQUESTED';
+export const CONFIG_LOADED = 'CONFIG_LOADED';
+export const CONFIG_LOADING_ERROR = 'CONFIG_LOADING_ERROR';
+
+// environment
+export const ENVIRONMENT_CHANGED = 'ENVIRONMENT_CHANGED';
+
+// notifications
+export const REMOVE_NOTIFICATION = 'REMOVE_NOTIFICATION';
+export const NOT_FOUND = 'NOT_FOUND';
+
+// operations
+export const OPERATION_SUCCEEDED = 'OPERATION_SUCCEEDED';
+export const OPERATION_FAILED = 'OPERATION_FAILED';
+export const JSON_PARSE_ERROR = 'JSON_PARSE_ERROR';
+export const ERROR_CUSTOM_MESSAGE = 'ERROR_CUSTOM_MESSAGE';
+

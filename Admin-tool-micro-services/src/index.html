@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/system.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/amd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/named-exports.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/named-register.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/5.0.0/extras/use-default.min.js"></script>
+    <!-- Empty object - to dynamically load app manifest and common-deps import maps -->
+    <script type="systemjs-importmap">{}</script>
+
+    <!-- Create systemjs-importmap of the url locations -->
+    <script src="http://localhost:7239/app-manifest.js"></script>
+    <!-- Load the common deps-->
+    <script src="http://localhost:7234/common-deps.js"></script>
+
+    <!-- Load the application -->
+    <script>
+      System.import('@manager/config')
+    </script>
+    <script>
+      System.import('@manager/globalReducer')
+    </script>
+
+    <!-- Static navbar -->
+    <link rel="stylesheet" href="http://localhost:7233/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <div id='navbar'>
+    </div>
+
+  </body>
+</html>

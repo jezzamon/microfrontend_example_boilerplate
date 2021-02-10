@@ -1,0 +1,9 @@
+{
+  "environments": {
+    "local": {
+      "host": "http://localhost:8090",
+      "authentication": false
+    }
+  },
+"isProduction": false
+}
